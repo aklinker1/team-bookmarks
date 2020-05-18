@@ -1,0 +1,29 @@
+{
+  "name": "team-bookmarks",
+  "version": "0.1.0",
+  "description": "Team wide bookmarks page framework",
+  "main": "lib/index.js",
+  "bin": "lib/cli/index.js",
+  "repository": "https://github.com/aklinker1/team-bookmarks",
+  "homepage": "https://github.com/aklinker1/team-bookmarks#readme",
+  "bugs": {
+    "url": "https://github.com/aklinker1/multi-proc/issues"
+  },
+  "author": "Aaron Klinker <aaronklinker1@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "tsc",
+    "cli:start": "ts-node src/cli/index.ts start"
+  },
+  "dependencies": {
+    "commander": "^5.1.0",
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "@vue/cli": "^4.3.1",
+    "prettier": "^2.0.5",
+    "ts-node": "^8.10.1",
+    "typescript": "^3.9.2"
+  }
+}
