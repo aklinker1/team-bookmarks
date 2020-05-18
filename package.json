@@ -4,6 +4,7 @@
   "description": "Team wide bookmarks page framework",
   "main": "lib/index.js",
   "bin": "lib/cli/index.js",
+  "types": "lib/index.d.ts",
   "repository": "https://github.com/aklinker1/team-bookmarks",
   "homepage": "https://github.com/aklinker1/team-bookmarks#readme",
   "bugs": {
@@ -12,9 +13,11 @@
   "author": "Aaron Klinker <aaronklinker1@gmail.com>",
   "license": "MIT",
   "private": false,
+  "keywords": ["bookmarks", "team", "vue", "framework"],
   "scripts": {
     "build": "tsc",
-    "cli:start": "ts-node src/cli/index.ts start"
+    "cli:start": "ts-node src/cli/index.ts start",
+    "prepare": "yarn build"
   },
   "dependencies": {
     "commander": "^5.1.0",

@@ -1,0 +1,14 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "reset": "./reset.sh",
+    "start": "team-bookmarks start",
+    "watch": "team-bookmarks watch",
+    "build": "team-bookmarks build"
+  },
+  "devDependencies": {
+    "team-bookmarks": "../"
+  }
+}
