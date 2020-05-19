@@ -6,7 +6,7 @@ A easy to setup team bookmarks webpage ready to deploy to github pages!
 
 ## Install
 
-Install as a dev dependency with your favorite package manager: 
+Install as a dev dependency with your favorite package manager:
 
 ```bash
 yarn add -D team-bookmarks
@@ -25,9 +25,7 @@ Create a file called `bookmarks.ts` or `bookmarks.js`, and export the config obj
 import TeamBookmarks from 'team-bookmarks';
 
 export default TeamBookmarks({
-  title: "{Team Name} Bookmarks",
   bookmarks: [],
-  iconMap: {},
 });
 ```
 
@@ -36,7 +34,7 @@ export default TeamBookmarks({
 const TeamBookmarks = require('team-bookmarks');
 
 module.exports = TeamBookmarks({
-  title: "{Team Name} Bookmarks",
+  title: '{Team Name} Bookmarks',
   bookmarks: [],
   iconMap: {},
 });

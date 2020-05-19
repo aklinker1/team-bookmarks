@@ -7,7 +7,8 @@
     "strict": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "rootDir": "src"
+    "rootDir": "src",
+    "typeRoots": ["node_modules/@types", "src/@types"]
   },
   "include": ["src"],
   "exclude": ["node_modules", "**/__tests__/*", "src/vue"]
