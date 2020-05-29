@@ -1,5 +1,9 @@
 #!/bin/bash
-yarn --cwd ../ build
+cd ..
+yarn
+yarn build
+yarn build:zip-vue
+
+cd example
 rm -rf node_modules
-yarn install
-yarn team-bookmarks -v
+yarn

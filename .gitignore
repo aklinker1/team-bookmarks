@@ -1,3 +1,10 @@
 /node_modules
 /lib
+/dist
+/src/vue/dist
+/src/vue/docs
+
 *.log
+.DS_Store
+vue.zip
+team-bookmarks-*.tgz

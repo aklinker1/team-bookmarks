@@ -1,7 +1,7 @@
 <template>
   <div id="app" :class="{ lightTheme }">
     <SortOrderDialog :isVisible="isSortOrderEditorOpen" @close="isSortOrderEditorOpen = false" />
-    <h1 class="title">Expert Services Bookmarks</h1>
+    <h1 v-if="bookmarksTitle" class="title">{{bookmarksTitle}}</h1>
     <div
       id="grid"
       style="null"
@@ -29,11 +29,8 @@
         <div><div v-ripple="rippleColor" /></div>
       </div>
     </div>
-    <p class="github-link">
-      Served from:
-      <a href="https://github.deere.com/ak48790/expert-services-bookmarks/">
-        ak48790/expert-services-bookmarks
-      </a>
+    <p v-if="repoUrl" class="github-link">
+      Served from: <a :href="repoUrl">{{repoUrl}}</a>
     </p>
   </div>
 </template>
@@ -41,11 +38,11 @@
 <script lang="ts">
 import Vue from 'vue';
 import Category from '@/components/Category.vue';
-import BookmarksData from '@/bookmarks';
 import Utils from './Utils';
 import ThemeMixin from '@/mixins/ThemeMixin';
 import SortOrderDialog from '@/components/SortOrderDialog.vue';
 import SortedCategoriesMixin from '@/mixins/SortedCategoriesMixin';
+import config from '@/config';
 
 export default Vue.extend({
   name: 'App',
@@ -60,6 +57,8 @@ export default Vue.extend({
   data() {
     return {
       isSortOrderEditorOpen: false,
+      bookmarksTitle: config.title,
+      repoUrl: config.repoUrl,
     };
   },
   watch: {

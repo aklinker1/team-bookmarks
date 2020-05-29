@@ -38,7 +38,7 @@
 <script lang="ts">
 import Vue from 'vue';
 import ThemeMixin from '../mixins/ThemeMixin';
-import { FAVICON_MAP } from '@/bookmarks';
+import config from '@/config';
 
 const NO_URL_ICON =
   'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/320/openmoji/242/cross-mark_274c.png';
@@ -70,7 +70,7 @@ export default Vue.extend({
       let url = this.bookmark.url as string;
       url = url.replace('https://', '').replace('http://', '');
       url = url.substring(0, url.indexOf('/'));
-      favicon = FAVICON_MAP[url] || `https://${url || ''}/favicon.ico`;
+      favicon = config.iconMap[url] || `https://${url || ''}/favicon.ico`;
     }
     return {
       favicon,

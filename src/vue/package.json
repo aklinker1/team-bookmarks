@@ -1,9 +1,9 @@
 {
-  "name": "expert-services-bookmarks",
+  "name": "team-bookmarks-vue",
   "version": "1.0.0",
   "private": true,
   "author": {
-    "email": "KlinkerAaron@JohnDeere.com",
+    "email": "aaronklinker1@gmail.com",
     "name": "Aaron Klinker"
   },
   "scripts": {

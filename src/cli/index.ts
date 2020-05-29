@@ -2,34 +2,33 @@
 
 import CLI, { Command } from 'commander';
 import start from './actions/start';
-import watch from './actions/watch';
-import check from './actions/check';
+import build from './actions/build';
 import deploy from './actions/deploy';
 
 (async function main() {
-  CLI.version('0.0.1', '-v --version').option(
-    '-b --bookmarks <bookmark-file>',
-    "Specify the path to your bookmarks file if it is not 'bookmarks.ts' or 'bookmarks.js'"
-  );
+  const program = addGlobalOptions(new Command().version('0.0.1', '-v --version'));
 
   //#region start
-  CLI.command('start').action(start);
-  //#endregion
-
-  //#region watch
-  CLI.command('watch').action(watch);
+  program.command('start').action(start(program));
   //#endregion
 
   //#region check
-  CLI.command('check').action(check);
+  program.command('build').action(build(program));
   //#endregion
 
   //#region deploy
   const deployCommand = new Command('deploy');
-  deployCommand.command('github:gh-pages').action(deploy.github['gh-pages']);
-  deployCommand.command('github:docs').action(deploy.github['docs']);
-  CLI.addCommand(deployCommand);
+  deployCommand.command('github:gh-pages').action(deploy.github['gh-pages'](program));
+  deployCommand.command('github:docs').action(deploy.github['docs'](program));
+  program.addCommand(deployCommand);
   //#endregion
 
-  await CLI.parseAsync(process.argv);
+  await program.parseAsync(process.argv);
 })();
+
+function addGlobalOptions(command: CLI.Command): CLI.Command {
+  return command.option(
+    '-b --bookmarks <bookmark-file>',
+    "Specify the path to your bookmarks file if it is not 'bookmarks.ts' or 'bookmarks.js'"
+  );
+}

@@ -1,6 +1,6 @@
 {
   "name": "team-bookmarks",
-  "version": "0.1.0",
+  "version": "0.0.17",
   "description": "Team wide bookmarks page framework",
   "main": "lib/index.js",
   "bin": "lib/cli/index.js",
@@ -13,20 +13,35 @@
   "author": "Aaron Klinker <aaronklinker1@gmail.com>",
   "license": "MIT",
   "private": false,
-  "keywords": ["bookmarks", "team", "vue", "framework"],
+  "keywords": [
+    "bookmarks",
+    "team",
+    "vue",
+    "framework"
+  ],
   "scripts": {
     "build": "tsc",
+    "build:zip-vue": "ts-node src/scripts/zip-vue.ts",
     "cli:start": "ts-node src/cli/index.ts start",
-    "prepare": "yarn build"
+    "prepublishOnly": "yarn build",
+    "postinstall": "node lib/scripts/post-install.js"
   },
   "dependencies": {
     "commander": "^5.1.0",
-    "vue": "^2.6.11"
+    "core-js": "^3.6.4",
+    "extract-zip": "^2.0.0",
+    "vue": "^2.6.11",
+    "vue-masonry": "^0.11.8",
+    "vue-ripple-directive": "hjrt/vue-ripple-directive",
+    "vuedraggable": "^2.23.2",
+    "vuex": "^3.4.0",
+    "vuex-persist": "^2.2.0"
   },
   "devDependencies": {
     "@vue/cli": "^4.3.1",
     "prettier": "^2.0.5",
     "ts-node": "^8.10.1",
-    "typescript": "^3.9.2"
+    "typescript": "^3.9.2",
+    "zip-a-folder": "^0.0.12"
   }
 }

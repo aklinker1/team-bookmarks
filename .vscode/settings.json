@@ -1,5 +1,6 @@
 {
-  "cSpell.ignoreWords": ["endregion"],
+  "cSpell.ignoreWords": ["endregion", "vuex", "vuedraggable"],
   "editor.formatOnSave": true,
-  "files.insertFinalNewline": true
+  "files.insertFinalNewline": true,
+  "task.autoDetect": "off"
 }

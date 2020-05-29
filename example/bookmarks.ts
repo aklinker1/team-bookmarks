@@ -1,4 +1,4 @@
-import TeamBookmarks from '../lib';
+import TeamBookmarks from 'team-bookmarks';
 
 export default TeamBookmarks({
   bookmarks: [

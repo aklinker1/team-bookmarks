@@ -1,3 +1,11 @@
-/example
-/src
+/.vscode
 /docs
+/example
+/node_modules
+/src
+
+.no-postinstall
+.prettierignore
+.prettierrc
+tsconfig.json
+team-bookmarks-*.tgz

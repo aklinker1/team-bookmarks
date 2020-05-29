@@ -4,11 +4,11 @@
   "license": "MIT",
   "scripts": {
     "reset": "./reset.sh",
-    "start": "team-bookmarks start",
-    "watch": "team-bookmarks watch",
-    "build": "team-bookmarks build"
+    "start": "team-bookmarks -b bookmarks.ts start",
+    "watch": "team-bookmarks -b bookmarks.ts watch",
+    "build": "team-bookmarks -b bookmarks.ts build"
   },
   "devDependencies": {
-    "team-bookmarks": "../"
+    "team-bookmarks": "file:../team-bookmarks-v0.0.17.tgz"
   }
 }

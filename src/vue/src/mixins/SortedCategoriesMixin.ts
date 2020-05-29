@@ -1,11 +1,11 @@
 import Vue from 'vue';
-import BookmarksData from '@/bookmarks';
+import config from '@/config';
 
 export default Vue.extend({
   computed: {
     sortedCategories() {
       const sortedOrder = this.$store.getters.sortOrder;
-      return [...BookmarksData].sort((l, r) => {
+      return [...config.bookmarks].sort((l, r) => {
         const lOrder = sortedOrder[l.name];
         const rOrder = sortedOrder[r.name];
         if (lOrder != null && rOrder != null) {
