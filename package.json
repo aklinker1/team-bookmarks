@@ -1,6 +1,6 @@
 {
   "name": "team-bookmarks",
-  "version": "0.0.29",
+  "version": "0.0.30",
   "description": "Team wide bookmarks page framework",
   "main": "lib/index.js",
   "bin": "lib/cli/index.js",
