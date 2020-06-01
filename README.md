@@ -45,18 +45,16 @@ Next, add some scripts to your `package.json`:
 ```json
 "scripts": {
     "start": "team-bookmarks start",
-    "watch": "team-bookmarks watch",
     "check": "team-bookmarks check",
     "build": "team-bookmarks build",
     "deploy": "team-bookmarks deploy github:gh-pages"
 }
 ```
 
-This library works by generating files at runtime when running any of the above commands, so you'll want to add the following to your `.gitignore`:
+This library works by generating files at runtime for any of the above commands, so you'll want to add the following to your `.gitignore`:
 
 ```ignore
 # generated files
-/dist-dev
 /dist
 ```
 
@@ -80,4 +78,7 @@ Create a production build in the `dist/` directory:
 yarn build
 ```
 
-## CLI Docs
+## Documentation
+
+- CLI Documentation
+- Deployment

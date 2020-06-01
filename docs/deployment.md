@@ -2,11 +2,23 @@
 
 You can read more about the `team-bookmarks` command in the [CLI documentation]().
 
-You can deploy the `dist/` directory however you like, but this library is shipped with a `deploy` command that will deploy directly to github pages!
+Before doing anything, make sure to setup your Vue config. Below is what I would recommend to start off with.
+
+```js
+// vue.config.js
+const path = require('path');
+
+module.exports = {
+  // Paths here must be absolute. This will create a folder called `dist` next to this file
+  outputDir: path.join(__dirname, 'dist'),
+};
+```
+
+Once that is setup, simply run `yarn build` to build a production distribution. You can deploy the `dist/` directory however you like, but this library is shipped with a `deploy` command that will help deploy to several different hosts!
 
 <br/>
 
-## Basic Deployment
+## `team-bookmarks deploy`
 
 For example, to deploy to the github project stored at your git origin, simply run:
 
@@ -23,8 +35,4 @@ The `deploy` command supports the following host locations:
 - `github:gh-pages` - Host from the `origin/gh-pages` branch
 - `github:docs` - Host from the `docs/` folder on the `origin/master` branch
 
-<br/>
-
-## Advanced Deployment
-
-To deploy to anywhere else, simply run a production build and then upload the `dist/` directory to wherever you want to host your bookmarks website.
+See the [CLI documentation]() for information and examples of how to use each of these deploy locations

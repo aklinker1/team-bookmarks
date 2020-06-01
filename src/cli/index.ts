@@ -32,5 +32,5 @@ function addGlobalOptions(command: CLI.Command): CLI.Command {
       '-b --bookmarks <bookmark-file>',
       "Specify the path to your bookmarks file if it is not 'bookmarks.ts' or 'bookmarks.js'"
     )
-    .option('--vueConfig <vue-config>', 'Specify the vue config file');
+    .option('-c --vueConfig <vue-config>', 'Specify the vue config file');
 }
