@@ -3,7 +3,7 @@ import { execSync } from 'child_process';
 import path from 'path';
 
 export default (baseCommand: any) => async (subCommand: any) => {
-  const bookmarksFile = baseCommand['bookmarks'];
+  const bookmarksFile = baseCommand['bookmarks'] || 'bookmarks.ts';
   const vueConfig = path.join(process.cwd(), baseCommand['vueConfig'] || 'vue.config.js');
 
   prepare();

@@ -1,9 +1,9 @@
 import path from 'path';
-import { zip } from 'zip-a-folder';
 import { copyFileSync, readdirSync, unlinkSync, existsSync, lstatSync, rmdirSync } from 'fs';
 import { execSync } from 'child_process';
 
 export async function zipVue() {
+  const { zip } = await import('zip-a-folder');
   try {
     const vueNodeModules = relativePath('src', 'vue', 'node_modules');
     deleteFolderRecursive(vueNodeModules);
