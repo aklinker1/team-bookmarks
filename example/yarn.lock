@@ -154,9 +154,9 @@ sortablejs@^1.10.1:
   resolved "https://registry.yarnpkg.com/sortablejs/-/sortablejs-1.10.2.tgz#6e40364d913f98b85a14f6678f92b5c1221f5290"
   integrity sha512-YkPGufevysvfwn5rfdlGyrGjt7/CRHwvRPogD/lC+TnvcN29jDpCifKP+rBqf+LRldfXSTh+0CGLcSg0VIxq3A==
 
-"team-bookmarks@file:../team-bookmarks-v0.0.17.tgz":
-  version "0.0.17"
-  resolved "file:../team-bookmarks-v0.0.17.tgz#dea9eea8180604fcede166f9ece05ac18f6cc82a"
+"team-bookmarks@file:../team-bookmarks-v0.0.34.tgz":
+  version "0.0.34"
+  resolved "file:../team-bookmarks-v0.0.34.tgz#54610d7b5a6029e5a1145db37fba0a451e785b85"
   dependencies:
     commander "^5.1.0"
     core-js "^3.6.4"

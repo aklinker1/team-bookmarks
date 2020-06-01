@@ -4,7 +4,7 @@ import path from 'path';
 
 export default (baseCommand: any) => async (subCommand: any) => {
   const bookmarksFile = baseCommand['bookmarks'];
-  // const packageManager = baseCommand['packageManager'] === 'yarn' ? 'yarn' : 'npm';
+  const vueConfig = path.join(process.cwd(), baseCommand['vueConfig'] || 'vue.config.js');
 
   prepare();
   copyBookmarks(bookmarksFile);
@@ -17,7 +17,7 @@ export default (baseCommand: any) => async (subCommand: any) => {
     'team-bookmarks-vue'
   );
 
-  execSync('npm run start', {
+  execSync(`VUE_CLI_SERVICE_CONFIG_PATH=${vueConfig} npm run start `, {
     cwd,
     stdio: 'inherit',
   });

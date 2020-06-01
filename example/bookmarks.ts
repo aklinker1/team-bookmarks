@@ -1,6 +1,7 @@
 import TeamBookmarks from 'team-bookmarks';
 
 export default TeamBookmarks({
+  title: "Test", 
   bookmarks: [
     {
       name: 'Bookmarks',

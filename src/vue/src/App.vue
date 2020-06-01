@@ -66,6 +66,9 @@ export default Vue.extend({
       Utils.reloadGrid(this);
     },
   },
+  beforeCreate() {
+    window.document.title = config.title || "Team Bookmarks";
+  }
 });
 </script>
 
@@ -90,7 +93,11 @@ export default Vue.extend({
 
   .title {
     color: rgba($color: white, $alpha: 0.24);
-    margin: 32px 0;
+    margin-top: 32px;
+  }
+
+  #grid {
+    margin-top: 32px;
   }
 
   .settings-buttons {

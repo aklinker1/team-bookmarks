@@ -2,7 +2,6 @@ import unzip from 'extract-zip';
 import { readFileSync } from 'fs';
 import path from 'path';
 import { relativePath } from '../cli/utils';
-import { execSync } from 'child_process';
 
 try {
   readFileSync(path.join(process.cwd(), '.no-postinstall'));

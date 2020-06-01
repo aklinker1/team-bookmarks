@@ -27,8 +27,10 @@ import deploy from './actions/deploy';
 })();
 
 function addGlobalOptions(command: CLI.Command): CLI.Command {
-  return command.option(
-    '-b --bookmarks <bookmark-file>',
-    "Specify the path to your bookmarks file if it is not 'bookmarks.ts' or 'bookmarks.js'"
-  );
+  return command
+    .option(
+      '-b --bookmarks <bookmark-file>',
+      "Specify the path to your bookmarks file if it is not 'bookmarks.ts' or 'bookmarks.js'"
+    )
+    .option('--vueConfig <vue-config>', 'Specify the vue config file');
 }

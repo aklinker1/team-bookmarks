@@ -9,6 +9,6 @@
     "build": "team-bookmarks -b bookmarks.ts build"
   },
   "devDependencies": {
-    "team-bookmarks": "file:../team-bookmarks-v0.0.17.tgz"
+    "team-bookmarks": "file:../team-bookmarks-v0.0.34.tgz"
   }
 }
