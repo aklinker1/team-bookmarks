@@ -1,0 +1,55 @@
+/* html,
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+html,
+body,
+body * {
+  margin: 0;
+  padding: 0;
+}
+
+body * {
+  color: white;
+}
+body a {
+  color: royalblue;
+}
+
+.child-inset {
+  margin-left: 16px;
+}
+
+.icon-size {
+  width: 24px;
+  height: 24px;
+}
+
+.icon-size-small {
+  width: 20px;
+  height: 20px;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-space-between {
+  justify-content: space-between;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+strong {
+  font-weight: 900;
+} */
