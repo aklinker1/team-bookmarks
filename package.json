@@ -6,7 +6,8 @@
     "lib",
     "src/web",
     "index.html",
-    "tsconfig.json"
+    "tsconfig.json",
+    "$schema.json"
   ],
   "main": "./lib/index.js",
   "bin": {

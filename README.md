@@ -22,7 +22,7 @@ Create a file called `bookmarks.json`:
 
 ```json
 {
-  "$schema": "./node_modules/team_bookmarks/schema.json",
+  "$schema": "./node_modules/team_bookmarks/$schema.json",
   "title": "",
   "repo": "",
   "bookmarks": [
