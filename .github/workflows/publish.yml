@@ -40,3 +40,7 @@ jobs:
           tag_name: ${{ steps.changelog.outputs.tag }}
           release_name: ${{ steps.changelog.outputs.tag }}
           body: ${{ steps.changelog.outputs.clean_changelog }}
+      - name: Deploy to GitHub Pages
+        run: |
+          yarn cli build
+          yarn gh-pages -d dist
