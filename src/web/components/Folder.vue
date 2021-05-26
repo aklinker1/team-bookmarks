@@ -26,7 +26,7 @@
     <transition name="list">
       <div v-if="!isMinimized">
         <div v-for="(item, index) in folder.children" :key="index" class="pl-2 -mt-1">
-          <Folder v-if="!!item.children" :folder="item" :parentPath="path" @reloadGrid="$emit('reloadGrid')" />
+          <Folder v-if="'children' in item" :folder="item" :parentPath="path" @reloadGrid="$emit('reloadGrid')" />
           <Bookmark v-else :bookmark="item" :parentPath="path" notRoot />
         </div>
       </div>
@@ -38,6 +38,7 @@
 import { computed, defineComponent, PropType } from "vue";
 import Bookmark from "./Bookmark.vue";
 import { useTree } from "../composition/tree";
+import { IFolder } from "../../types";
 
 export default defineComponent({
   name: "Folder",

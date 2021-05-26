@@ -33,6 +33,7 @@
 
 <script lang="ts">
 import { computed, defineComponent, PropType } from "vue";
+import { IBookmark } from "../../types";
 import { useConfig } from "../composition/config";
 
 const NO_URL_ICON =
@@ -47,8 +48,8 @@ export default defineComponent({
   },
   setup(props) {
     const disabled = computed(() => !props.bookmark.url);
-    const title = computed<string | null>(() => {
-      if (!disabled.value) return null;
+    const title = computed<string | undefined>(() => {
+      if (!disabled.value) return undefined;
       return "No URL for this bookmark";
     });
     const path = computed<string>(

@@ -8,6 +8,8 @@
 import { defineComponent, ref, watch } from "vue";
 import Masonary from "masonry-layout";
 
+console.log(Masonary);
+
 export default defineComponent({
   props: {
     itemSelector: { type: String, required: true },

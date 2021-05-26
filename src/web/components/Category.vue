@@ -11,7 +11,7 @@
     </h2>
     <div v-for="(item, index) in category.children" :key="item.name">
       <Folder
-        v-if="!!item.children"
+        v-if="'children' in item"
         :folder="item"
         :parentPath="path"
         :hideBorderTop="index === 0"
@@ -29,6 +29,7 @@
 
 <script lang="ts">
 import { computed, defineComponent, PropType } from "vue";
+import { ICategory } from "../../types";
 import Bookmark from "./Bookmark.vue";
 import Folder from "./Folder.vue";
 
@@ -40,11 +41,11 @@ export default defineComponent({
   },
   emits: ['reloadGrid'],
   setup(props) {
-    const borderStyle = computed<string | null>(() =>
-      props.category.color ? `border-color: ${props.category.color};` : null
+    const borderStyle = computed<string | undefined>(() =>
+      props.category.color ? `border-color: ${props.category.color};` : undefined
     );
-    const backgroundStyle = computed<string | null>(() =>
-      props.category.color ? `background-color: ${props.category.color};` : null
+    const backgroundStyle = computed<string | undefined>(() =>
+      props.category.color ? `background-color: ${props.category.color};` : undefined
     );
     const path = computed(() => props.category.name);
 
