@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {
+    "Bookmark": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "icon": { "type": "string" },
+        "url": { "type": "string" }
+      },
+      "required": ["name", "url"]
+    },
+    "Folder": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "children": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              { "$ref": "#/definitions/Bookmark" },
+              { "$ref": "#/definitions/Folder" }
+            ]
+          }
+        }
+      },
+      "required": ["name", "children"]
+    },
+    "Category": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "color": { "type": "string" },
+        "children": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              { "$ref": "#/definitions/Bookmark" },
+              { "$ref": "#/definitions/Folder" }
+            ]
+          }
+        }
+      },
+      "required": ["name", "children"]
+    }
+  },
+  "properties": {
+    "title": { "type": "string" },
+    "repo": { "type": "string" },
+    "bookmarks": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/Category" }
+    }
+  }
+}
